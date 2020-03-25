@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 @Component({
   selector: 'app-root',
   // templateUrl: './app.component.html',
-  templateUrl: `
+  template: `
     <h1>Bind Firestore collection example</h1>
     <ul>
         <li class="text" *ngFor="let note of notes$ | async">{{note.title}}</li>
