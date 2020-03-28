@@ -41,4 +41,12 @@
       Login
     </button>
   </mat-card-content>
+  <mat-card-content><br>----- OR -----<br><br></mat-card-content>
+  <mat-card-content>
+    <button mat-raised-button color="accent" (click)="signUp()">Sign Up</button>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-progress-bar *ngIf="isLoading$ | async" mode="indeterminate">
+    </mat-progress-bar>
+  </mat-card-footer>
 </mat-card>
