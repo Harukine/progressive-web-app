@@ -6,11 +6,13 @@ import {Observable} from 'rxjs';
   selector: 'app-root',
   // templateUrl: './app.component.html',
   template: `
-    <h1>Bind Firestore collection example</h1>
-    <ul>
-        <li class="text" *ngFor="let note of notes$ | async">{{note.title}}</li>
-    </ul>
-    <router-outlet></router-outlet>
+    <div class="pwa-note">
+      <app-header></app-header>
+      <div class="main">
+        <router-outlet></router-outlet>
+      </div>
+      <app-footer></app-footer>
+    </div>
     `,
   styleUrls: ['./app.component.scss']
 })
