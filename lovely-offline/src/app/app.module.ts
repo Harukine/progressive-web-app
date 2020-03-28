@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {CoreModule} from './modules/core/core.module';
+import {LayoutModule} from './modules/layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularFirestoreModule, // needed for database features
     AngularFireAuthModule, // needed for auth features
     BrowserAnimationsModule,
+    CoreModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
