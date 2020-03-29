@@ -20,7 +20,7 @@
   <mat-card-content>
     <div class="login-container" [formGroup]="loginForm">
       <mat-form-field>
-        <input matInput placeholder="Enter your email" formControl Name="email" required>
+        <input matInput placeholder="Enter your email" formControlName="email" required>
         <mat-error *ngIf="loginForm.get('email').invalid">
           {{getErrorMessage('email', 'email')}}
         </mat-error>
