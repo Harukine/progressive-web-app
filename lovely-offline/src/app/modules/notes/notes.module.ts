@@ -5,13 +5,15 @@ import { NotesRoutingModule } from './notes-routing.module';
 import { NotesListComponent } from './notes-list/notes-list.component';
 import { NotesAddComponent } from './notes-add/notes-add.component';
 import { NoteDetailsComponent } from './note-details/note-details.component';
+import {SharedModule} from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [NotesListComponent, NotesAddComponent, NoteDetailsComponent],
   imports: [
     CommonModule,
-    NotesRoutingModule
+    NotesRoutingModule,
+    SharedModule
   ]
 })
 export class NotesModule { }
