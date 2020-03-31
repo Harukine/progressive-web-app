@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
+import {AuthGuard} from './modules/notes/auth.guard';
 
 
 const routes: Routes = [
@@ -15,11 +16,13 @@ const routes: Routes = [
   {
     path: 'notes',
     loadChildren: () => import('./modules/notes/notes.module').then(m => m.NotesModule),
+    canLoad: [AuthGuard]
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
+  providers: [AuthGuard],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
